@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Emblem Bookshop</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="contact_us_page.html">Contact Us</a></li>
+        <li><a href="#">Accessibility</a></li>
+        <li><a href="#">Login</a></li>
+      </ul> 
+    </nav>
+  </header>
+  
+  <section class="navbar">
+    <div class="brand">
+      <img src="../assets/images/logo/emblem_logo_96.png"></img>
+      <div class="brand-text">
+        <h1>Emblem</h1>
+        <h2>Rare | Collectible Books</h2>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="books_page.html">Books</a></li>
+        <li><a href="delivery_page.html">Delivery</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Books as an Investment</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="contact">
+    <h2>
+      Contact Us
+    </h2>
+    <form>
+      <input type="text" name="title" id="title" placeholder="Title" required/>
+      <input type="text" name="firstname" id="firstname" placeholder="First Name" required/>
+      <input type="text" name="surname" id="surname" placeholder="Surname" required/>
+      <input type="email" name="email" id="email" placeholder="Email" required/>
+      <select id="interest" name="interest">
+        <option>Interest</option>
+        <option>Old Books</option>
+        <option>19th Century Books</option>
+        <option>Even older Books</option>
+        <option>Other</option>
+      </select>
+      <div id="intention">
+        I am: 
+        <input type="checkbox" id="buying" name="buying" />
+        <label for="buying">Buying</label>
+        <input type="checkbox" id="selling" name="selling" />
+        <label for="selling">Selling</label>
+      </div>
+      <select id="isdealer" name="isdealer">
+        <option>Are you a dealer?</option>
+        <option>Yes</option>
+        <option>No</option>
+      </select>
+      
+      <textarea name="message" id="message" placeholder="Message"></textarea>
+      <button type="submit" id="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <nav>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms and Conditions</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+</body> 
+</html>

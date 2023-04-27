@@ -1,0 +1,31 @@
+
+@mixin container($max-width: 1001px) {
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin desktop($width: 1025px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin tablet($width: 767px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin md($width: 481px) {
+  @media (min-width: $width) {
+    @content;
+  }
+}

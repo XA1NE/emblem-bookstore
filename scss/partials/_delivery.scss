@@ -1,0 +1,55 @@
+.delivery {
+  @include clearfix;
+  @include parisr(16px);
+
+  margin: 84px 20px 0 20px;  
+
+  .align-left {
+    text-align: left;
+  }
+
+  td {
+    text-align: center;
+  }
+
+  .phone-table {
+    display: table;
+  }
+
+  .tablet-table {
+    display: none;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid;
+  }
+
+  h2 {
+      @include parisr(24px);
+  }
+  
+  p {
+    @include parisr(18px);
+  }
+
+  @include tablet {
+    @include container($max-width: 740px);
+
+    margin-top: 84px; 
+    .phone-table {
+      display: none;
+    }
+  
+    .tablet-table {
+      display: table;
+    }
+  }
+  @include desktop {
+    max-width: 1001px !important;
+  }
+}

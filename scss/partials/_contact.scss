@@ -1,0 +1,114 @@
+.contact {
+  @include parisr(16px);
+  
+  @include desktop {
+    max-width: 1001px !important; 
+  }
+
+  @include tablet {
+    @include container($max-width: 740px); 
+    display: grid;
+    margin-top: 84px;
+
+    form {
+      justify-self: center;
+      grid-template-areas: "title ." 
+                           "firstname surname" 
+                           "email email"
+                           "interest interest"
+                           "intention isdealer"
+                           "message message"
+                           "submit submit";
+      width: 70%;
+      grid-row-gap: 10px;
+      grid-column-gap: 30px;
+
+      #title {
+        grid-area: title;
+      }
+
+      #firstname {
+        grid-area: firstname;
+      }
+      
+      #surname {
+        grid-area: surname;
+      }
+
+      #email {
+        grid-area: email;
+      }
+
+      #interest {
+        grid-area: interest;
+      }
+
+      #intention {
+        grid-area: intention;
+        align-self: center;
+      }
+
+      #isdealer {
+        grid-area: isdealer;
+      }
+
+      #message {
+        grid-area: message;
+      }
+      #submit {
+        grid-area: submit;
+      }
+    }
+  }
+
+
+  h2 {
+    @include parisr(24px);
+  }
+
+  margin: 0 20px;
+  margin-top: 84px;
+
+  form {
+    margin-top: 10px; 
+    
+    display: grid;
+    padding: 15px;
+    grid-row-gap: 10px;
+    border: black 2px solid;
+  
+    button {
+      min-height: 27px;
+      border: black 2px solid;
+      background-color: white;
+    }
+
+    textarea {
+      border: black 2px solid;
+      min-height: 100px;
+    }
+    
+    button:hover {
+      background-color: #236841;
+      color: white;
+    }
+    
+  }
+}    
+
+
+
+input:not([type="checkbox"]),
+select {
+  border: black 2px solid;
+  min-height: 27px;
+}
+
+input:focus-visible:invalid {
+  outline: red 2px solid;
+}
+
+input:focus:invalid {
+  outline: none;
+  border: red 2px solid;
+}

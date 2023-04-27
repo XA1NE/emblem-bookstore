@@ -1,0 +1,58 @@
+.catalogue {
+    @include container;
+    @include parisr(16px);
+
+    margin: 50px 20px 0 20px;
+    
+    display: grid;
+    h2 {
+        @include parisr(24px);
+    }
+    margin-top: 54px;
+
+    .catalogue-content {
+        margin-top: 60px;
+        display: grid;
+        grid-row-gap: 40px;
+
+        img {
+            height: 216px;
+            justify-self: center;
+        }
+
+        div {
+            display: grid;
+            justify-items: center;
+            grid-row-gap: 7px;
+        }
+    }
+
+    @include tablet {
+        @include container($max-width: 740px); 
+        margin-top: 54px;
+
+        .catalogue-description {
+            width: 65%;
+            justify-self: center;
+        }
+        .catalogue-content {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: 4fr 2fr 1fr;
+            align-items: center;
+            grid-row-gap: 60px;
+            width: 90%;
+            justify-self: center;
+        }
+    }
+    
+    @include desktop {
+        max-width: 1001px !important;
+    }
+
+    button {
+        min-height: 27px;
+        border: black 2px solid;
+        background-color: white;
+      }
+} 

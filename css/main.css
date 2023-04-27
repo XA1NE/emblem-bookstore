@@ -1,0 +1,745 @@
+body {
+  font-family: "Parisr", parisr;
+  line-height: 1.2;
+  background: #FFFFFF;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, p {
+  margin-top: 0;
+  margin: 0;
+}
+
+.navbar {
+  margin: 0 20px;
+}
+.navbar::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.navbar nav li, .navbar nav a {
+  color: #102f1d;
+}
+.navbar nav li:hover, .navbar nav .active {
+  background-color: #236841;
+}
+.navbar nav li:hover > a, .navbar nav .active > a {
+  color: white;
+}
+.navbar nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+@font-face {
+  .navbar nav a {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.navbar nav ul {
+  margin: 0;
+  padding: 0;
+  border: black 2px solid;
+  box-shadow: 2px 2px;
+  list-style: none;
+  display: grid;
+}
+.navbar nav li {
+  display: block;
+  text-transform: uppercase;
+}
+.navbar nav li:not(:last-of-type) {
+  border-bottom: black 2px solid;
+}
+.navbar nav li a {
+  padding: 5px 0 4px;
+  text-align: center;
+  color: #102f1d;
+  display: block;
+}
+.navbar .brand {
+  margin: 20px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.navbar .brand img {
+  justify-self: right;
+}
+.navbar .brand h1 {
+  font-size: 32px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .navbar .brand h1 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.navbar .brand h2 {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .navbar .brand h2 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+@media (min-width: 767px) {
+  .navbar {
+    margin: 0 auto;
+    max-width: 740px;
+  }
+  .navbar nav ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  }
+  .navbar nav li {
+    border-bottom: none !important;
+  }
+  .navbar nav li:not(:last-of-type) {
+    border-right: black 2px solid;
+  }
+}
+@media (min-width: 1025px) {
+  .navbar {
+    max-width: 1001px !important;
+  }
+}
+
+.sub-navbar {
+  margin-top: 10px;
+}
+.sub-navbar nav a {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .sub-navbar nav a {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.sub-navbar nav a:hover {
+  color: #236841;
+}
+.sub-navbar nav ul {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sub-navbar nav li {
+  padding: 0 6px;
+}
+.sub-navbar nav li:not(:last-of-type) {
+  border-bottom: black 2px solid;
+}
+@media (min-width: 767px) {
+  .sub-navbar {
+    margin: 0 auto;
+    max-width: 740px;
+    margin-top: 10px;
+  }
+  .sub-navbar nav ul {
+    flex-direction: row;
+  }
+  .sub-navbar nav li {
+    border-bottom: none !important;
+  }
+  .sub-navbar nav li:not(:last-of-type) {
+    border-right: black 2px solid;
+  }
+}
+@media (min-width: 1025px) {
+  .sub-navbar {
+    max-width: 1001px !important;
+  }
+}
+
+header {
+  margin: 0 auto;
+  max-width: 1001px;
+  margin: 10px 20px 0 20px;
+}
+header nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+@font-face {
+  header nav a {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+header nav ul {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: right;
+}
+header nav li {
+  margin-left: 7px;
+}
+@media (min-width: 767px) {
+  header {
+    margin: 0 auto;
+    max-width: 740px;
+  }
+}
+@media (min-width: 1025px) {
+  header {
+    max-width: 1001px !important;
+  }
+}
+
+.featured {
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 20px;
+  margin: 32px 20px 0 20px;
+}
+.featured img {
+  height: 203px;
+}
+.featured .featured-book {
+  display: grid;
+  grid-column-gap: 16px;
+  grid-row-gap: 10px;
+  justify-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+.featured .featured-book .phone-title {
+  display: block;
+}
+.featured .featured-book .tablet-title {
+  display: none;
+}
+@font-face {
+  .featured .featured-book {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.featured .featured-book h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 15px;
+}
+@font-face {
+  .featured .featured-book h2 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.featured .featured-book h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 10px;
+}
+@font-face {
+  .featured .featured-book h3 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.featured .featured-book h4 {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 10px;
+}
+@font-face {
+  .featured .featured-book h4 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+@media (min-width: 767px) {
+  .featured {
+    margin: 0 auto;
+    max-width: 740px;
+    margin-top: 54px;
+  }
+  .featured .featured-book {
+    grid-template-columns: auto 1fr;
+  }
+  .featured .featured-book .phone-title {
+    display: none;
+  }
+  .featured .featured-book .tablet-title {
+    display: block;
+  }
+  .featured .books-content {
+    margin: 0 50px;
+    margin-top: 30px;
+  }
+  .featured .books-author-images {
+    grid-template-columns: repeat(3, 225px);
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1025px) {
+  .featured {
+    max-width: 1001px !important;
+  }
+}
+
+.offers {
+  display: grid;
+  grid-row-gap: 20px;
+  margin: 32px 20px 0 20px;
+}
+.offers > div {
+  display: grid;
+  justify-items: center;
+}
+.offers .offer-img {
+  text-align: center;
+}
+.offers img {
+  height: 203px;
+}
+.offers h2 {
+  font-size: 32px;
+  font-weight: 500;
+  color: black;
+  margin-bottom: 15px;
+}
+@font-face {
+  .offers h2 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.offers .offer-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .offers .offer-text {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.offers .offer-text .phone-title {
+  display: block;
+}
+.offers .offer-text .tablet-title {
+  display: none;
+}
+@media (min-width: 767px) {
+  .offers {
+    margin: 0 auto;
+    max-width: 740px;
+    margin-top: 54px;
+    grid-column-gap: 30px;
+  }
+  .offers > div {
+    display: block !important;
+  }
+  .offers .phone-title {
+    display: none;
+  }
+  .offers .tablet-title {
+    display: table !important;
+  }
+  .offers *:last-child {
+    grid-column: 1/3;
+  }
+  .offers .books-content {
+    margin: 0 50px;
+    margin-top: 30px;
+  }
+  .offers .books-author-images {
+    grid-template-columns: repeat(3, 225px);
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1025px) {
+  .offers {
+    max-width: 1001px !important;
+  }
+}
+
+.delivery {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin: 84px 20px 0 20px;
+}
+.delivery::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@font-face {
+  .delivery {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.delivery .align-left {
+  text-align: left;
+}
+.delivery td {
+  text-align: center;
+}
+.delivery .phone-table {
+  display: table;
+}
+.delivery .tablet-table {
+  display: none;
+}
+.delivery table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.delivery table, .delivery th, .delivery td {
+  border: 1px solid;
+}
+.delivery h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .delivery h2 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.delivery p {
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .delivery p {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+@media (min-width: 767px) {
+  .delivery {
+    margin: 0 auto;
+    max-width: 740px;
+    margin-top: 84px;
+  }
+  .delivery .phone-table {
+    display: none;
+  }
+  .delivery .tablet-table {
+    display: table;
+  }
+}
+@media (min-width: 1025px) {
+  .delivery {
+    max-width: 1001px !important;
+  }
+}
+
+.books {
+  margin: 0 auto;
+  max-width: 1001px;
+  margin: 50px 20px 0 20px;
+}
+.books h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .books h2 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.books .phone-hidden {
+  display: none;
+}
+.books .books-content {
+  margin-top: 30px;
+}
+.books .books-author-images {
+  display: grid;
+  justify-items: center;
+}
+.books .books-author-images img {
+  height: 216px;
+  width: 225px;
+}
+.books .books-text {
+  margin-top: 70px;
+  font-size: 18px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .books .books-text {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+@media (min-width: 767px) {
+  .books {
+    margin: 0 auto;
+    max-width: 740px;
+    margin-top: 54px;
+  }
+  .books .phone-hidden {
+    display: block;
+  }
+  .books .books-content {
+    margin: 0 50px;
+    margin-top: 30px;
+  }
+  .books .books-author-images {
+    grid-template-columns: repeat(3, 225px);
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1025px) {
+  .books {
+    max-width: 1001px !important;
+  }
+}
+
+.contact {
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin: 0 20px;
+  margin-top: 84px;
+}
+@font-face {
+  .contact {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+@media (min-width: 1025px) {
+  .contact {
+    max-width: 1001px !important;
+  }
+}
+@media (min-width: 767px) {
+  .contact {
+    margin: 0 auto;
+    max-width: 740px;
+    display: grid;
+    margin-top: 84px;
+  }
+  .contact form {
+    justify-self: center;
+    grid-template-areas: "title ." "firstname surname" "email email" "interest interest" "intention isdealer" "message message" "submit submit";
+    width: 70%;
+    grid-row-gap: 10px;
+    grid-column-gap: 30px;
+  }
+  .contact form #title {
+    grid-area: title;
+  }
+  .contact form #firstname {
+    grid-area: firstname;
+  }
+  .contact form #surname {
+    grid-area: surname;
+  }
+  .contact form #email {
+    grid-area: email;
+  }
+  .contact form #interest {
+    grid-area: interest;
+  }
+  .contact form #intention {
+    grid-area: intention;
+    align-self: center;
+  }
+  .contact form #isdealer {
+    grid-area: isdealer;
+  }
+  .contact form #message {
+    grid-area: message;
+  }
+  .contact form #submit {
+    grid-area: submit;
+  }
+}
+.contact h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .contact h2 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.contact form {
+  margin-top: 10px;
+  display: grid;
+  padding: 15px;
+  grid-row-gap: 10px;
+  border: black 2px solid;
+}
+.contact form button {
+  min-height: 27px;
+  border: black 2px solid;
+  background-color: white;
+}
+.contact form textarea {
+  border: black 2px solid;
+  min-height: 100px;
+}
+.contact form button:hover {
+  background-color: #236841;
+  color: white;
+}
+
+input:not([type=checkbox]),
+select {
+  border: black 2px solid;
+  min-height: 27px;
+}
+
+input:focus-visible:invalid {
+  outline: red 2px solid;
+}
+
+input:focus:invalid {
+  outline: none;
+  border: red 2px solid;
+}
+
+footer {
+  margin: 0 auto;
+  max-width: 1001px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+footer nav a {
+  font-size: 13px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+@font-face {
+  footer nav a {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+footer nav ul {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+footer nav li {
+  margin-left: 7px;
+}
+
+.catalogue {
+  margin: 0 auto;
+  max-width: 1001px;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  margin: 50px 20px 0 20px;
+  display: grid;
+  margin-top: 54px;
+}
+@font-face {
+  .catalogue {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.catalogue h2 {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+@font-face {
+  .catalogue h2 {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format("woff"), url("/assets/fonts/parisr.ttf") format("truetype"), url("/assets/fonts/parisr.svg#parisr") format("svg");
+  }
+}
+.catalogue .catalogue-content {
+  margin-top: 60px;
+  display: grid;
+  grid-row-gap: 40px;
+}
+.catalogue .catalogue-content img {
+  height: 216px;
+  justify-self: center;
+}
+.catalogue .catalogue-content div {
+  display: grid;
+  justify-items: center;
+  grid-row-gap: 7px;
+}
+@media (min-width: 767px) {
+  .catalogue {
+    margin: 0 auto;
+    max-width: 740px;
+    margin-top: 54px;
+  }
+  .catalogue .catalogue-description {
+    width: 65%;
+    justify-self: center;
+  }
+  .catalogue .catalogue-content {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 4fr 2fr 1fr;
+    align-items: center;
+    grid-row-gap: 60px;
+    width: 90%;
+    justify-self: center;
+  }
+}
+@media (min-width: 1025px) {
+  .catalogue {
+    max-width: 1001px !important;
+  }
+}
+.catalogue button {
+  min-height: 27px;
+  border: black 2px solid;
+  background-color: white;
+}

@@ -1,0 +1,17 @@
+$ff-s: 'Parisr', parisr;
+
+$fw-n: 500;
+$fw-b: 900;
+
+
+@mixin parisr($fs, $fw: $fw_n) {
+  @font-face {
+    font-family: "parisr";
+    src: url("/assets/fonts/parisr.woff") format('woff'),
+         url("/assets/fonts/parisr.ttf") format('truetype'),
+         url("/assets/fonts/parisr.svg#parisr") format('svg');
+  }
+  font-size: $fs;
+  font-weight: $fw;
+  color: black;
+}
